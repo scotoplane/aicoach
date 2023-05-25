@@ -8,7 +8,7 @@ export const metadata = {
   description: 'Learn Effective Communication Strategies',
 };
 
-function RootLayout({ children }) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
@@ -26,5 +26,3 @@ function RootLayout({ children }) {
     </html>
   );
 }
-
-export default RootLayout;

@@ -7,7 +7,7 @@ import {
   signIn, signOut, useSession, getProviders,
 } from 'next-auth/react';
 
-function Nav() {
+export default function Nav() {
   const isUserLoggedIn = true;
 
   const [providers, setProviders] = useState(null);
@@ -133,5 +133,3 @@ function Nav() {
     </nav>
   );
 }
-
-export default Nav;
