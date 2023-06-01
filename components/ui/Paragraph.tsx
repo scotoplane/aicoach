@@ -1,6 +1,8 @@
 import { HTMLAttributes, forwardRef } from 'react';
 import { VariantProps, cva } from 'class-variance-authority';
 
+import cn from '@/lib/utils';
+
 interface ParagraphProps {}
 
 const paragraphVariants = cva(
@@ -30,7 +32,7 @@ const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(
       ref={ref}
       // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
-      className={paragraphVariants({ size, className })}
+      className={cn(paragraphVariants({ size, className }))}
     >
       {children}
     </p>
