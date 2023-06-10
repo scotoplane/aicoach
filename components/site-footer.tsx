@@ -17,7 +17,7 @@ export default function SiteFooter({ className }: React.HTMLAttributes<HTMLEleme
               rel="noreferrer"
               className="font-medium underline underline-offset-4"
             >
-              {siteConfig.authors[0].name}
+              {`${siteConfig.authors[0].name} `}
             </a>
             and
             {' '}
