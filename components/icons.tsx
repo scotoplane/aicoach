@@ -59,6 +59,7 @@ export const Icons = {
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 496 512"
+      // eslint-disable-next-line react/jsx-props-no-spreading
       {...props}
     >
       <path
