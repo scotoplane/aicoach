@@ -1,21 +1,18 @@
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from "@prisma/client";
 
 declare global {
-  interface Window {
-    cachedPrisma: PrismaClient;
-  }
+  // eslint-disable-next-line no-var
+  var cachedPrisma: PrismaClient;
 }
 
 let prisma: PrismaClient;
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === "production") {
   prisma = new PrismaClient();
 } else {
-  if (!window.cachedPrisma) {
-    window.cachedPrisma = new PrismaClient();
+  if (!global.cachedPrisma) {
+    global.cachedPrisma = new PrismaClient();
   }
-  prisma = window.cachedPrisma;
+  prisma = global.cachedPrisma;
 }
 
-const db = prisma;
-
-export default db;
+export const db = prisma;
