@@ -3,6 +3,14 @@
 
 // import { Icons } from '@components/icons';
 
+export type NavItem = {
+  title: string;
+  href: string;
+  disabled?: boolean;
+};
+
+export type MainNavItem = NavItem;
+
 export type Author = {
   name: string;
   github: string;
@@ -15,4 +23,8 @@ export type SiteConfig = {
   ogImage: string;
   github: string;
   authors: Author[];
+};
+
+export type HomeConfig = {
+  mainNav: MainNavItem[];
 };
