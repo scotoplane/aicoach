@@ -1,7 +1,7 @@
-import { createEnv } from '@t3-oss/env-nextjs';
-import { z } from 'zod';
+import { createEnv } from "@t3-oss/env-nextjs"
+import { z } from "zod"
 
-const env = createEnv({
+export const env = createEnv({
   server: {
     // This is optional because it's only used in development.
     // See https://next-auth.js.org/deployment.
@@ -38,6 +38,4 @@ const env = createEnv({
     STRIPE_PRO_MONTHLY_PLAN_ID: process.env.STRIPE_PRO_MONTHLY_PLAN_ID,
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
   },
-});
-
-export default env;
+})

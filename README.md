@@ -1,34 +1,90 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Taxonomy
 
-## Getting Started
+An open source application built using the new router, server components and everything new in Next.js 13.
 
-First, run the development server:
+> **Warning**
+> This app is a work in progress. I'm building this in public. You can follow the progress on Twitter [@shadcn](https://twitter.com/shadcn).
+> See the roadmap below.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
+## About this project
+
+This project as an experiment to see how a modern app (with features like authentication, subscriptions, API routes, static pages for docs ...etc) would work in Next.js 13 and server components.
+
+**This is not a starter template.**
+
+A few people have asked me to turn this into a starter. I think we could do that once the new features are out of beta.
+
+## Note on Performance
+
+> **Warning**
+> This app is using the unstable releases for Next.js 13 and React 18. The new router and app dir is still in beta and not production-ready.
+> **Expect some performance hits when testing the dashboard**.
+> If you see something broken, you can ping me [@shadcn](https://twitter.com/shadcn).
+
+## Features
+
+- New `/app` dir,
+- Routing, Layouts, Nested Layouts and Layout Groups
+- Data Fetching, Caching and Mutation
+- Loading UI
+- Route handlers
+- Metadata files
+- Server and Client Components
+- API Routes and Middlewares
+- Authentication using **NextAuth.js**
+- ORM using **Prisma**
+- Database on **PlanetScale**
+- UI Components built using **Radix UI**
+- Documentation and blog using **MDX** and **Contentlayer**
+- Subscriptions using **Stripe**
+- Styled using **Tailwind CSS**
+- Validations using **Zod**
+- Written in **TypeScript**
+
+## Roadmap
+
+- [x] ~Add MDX support for basic pages~
+- [x] ~Build marketing pages~
+- [x] ~Subscriptions using Stripe~
+- [x] ~Responsive styles~
+- [x] ~Add OG image for blog using @vercel/og~
+- [x] Dark mode
+
+## Known Issues
+
+A list of things not working right now:
+
+1. ~GitHub authentication (use email)~
+2. ~[Prisma: Error: ENOENT: no such file or directory, open '/var/task/.next/server/chunks/schema.prisma'](https://github.com/prisma/prisma/issues/16117)~
+3. ~[Next.js 13: Client side navigation does not update head](https://github.com/vercel/next.js/issues/42414)~
+4. [Cannot use opengraph-image.tsx inside catch-all routes](https://github.com/vercel/next.js/issues/48162)
+
+## Why not tRPC, Turborepo or X?
+
+I might add this later. For now, I want to see how far we can get using Next.js only.
+
+If you have some suggestions, feel free to create an issue.
+
+## Running Locally
+
+1. Install dependencies using pnpm:
+
+```sh
+pnpm install
+```
+
+2. Copy `.env.example` to `.env.local` and update the variables.
+
+```sh
+cp .env.example .env.local
+```
+
+3. Start the development server:
+
+```sh
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## License
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Licensed under the [MIT license](https://github.com/shadcn/taxonomy/blob/main/LICENSE.md).

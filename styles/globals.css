@@ -72,10 +72,10 @@
 
 @layer base {
   * {
-    @apply border;
+    @apply border-border;
   }
   body {
-    @apply border;
+    @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }

@@ -1,14 +1,19 @@
 {
-  "name": "aicoach",
-  "version": "0.1.0",
+  "name": "taxonomy",
+  "version": "0.2.0",
   "private": true,
+  "author": {
+    "name": "shadcn",
+    "url": "https://twitter.com/shadcn"
+  },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "contentlayer build && next build",
+    "turbo": "next dev --turbo",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install",
-    "test": "npm test"
+    "preview": "next build && next start",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@editorjs/code": "^2.8.0",
